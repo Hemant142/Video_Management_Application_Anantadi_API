@@ -6,6 +6,7 @@ const { connection } = require("./Config/db");
 const { userRouter } = require("./routes/authRoutes");
 const { videoRouter } = require("./routes/videoRoutes");
 // const { videoRouter } = require("./routes/videoRoutes");
+
 const PORT = process.env.PORT;
 
 const app = express();
