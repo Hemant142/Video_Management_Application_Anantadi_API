@@ -10,6 +10,7 @@ require("dotenv").config();
 const userRouter = express.Router();
 const SECRET_KEY = process.env.SECRET_KEY;
 
+
 userRouter.post("/register", async (req, res) => {
     const { username, email, password } = req.body;
     console.log(req.body, "REQ BODY");
