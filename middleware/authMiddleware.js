@@ -9,7 +9,7 @@ const authMiddleware = async (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.SECRET_KEY); // Use the same secret key
+    const decoded = jwt.verify(token, process.env.SECRETKEY); // Use the same secret key
     req.user = await UserModel.findById(decoded.userId).select("-password");
 
     if (!req.user) {

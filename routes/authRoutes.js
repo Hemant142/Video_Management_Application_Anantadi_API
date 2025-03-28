@@ -8,7 +8,7 @@ require("dotenv").config();
 
 
 const userRouter = express.Router();
-const SECRET_KEY = process.env.SECRET_KEY;
+const SECRETKEY = process.env.SECRETKEY;
 
 
 userRouter.post("/register", async (req, res) => {
@@ -63,7 +63,7 @@ userRouter.post("/login", async (req, res) => {
   
       const token = jwt.sign(
         { userId: existingUser._id, username: existingUser.username },
-        SECRET_KEY,
+        SECRETKEY,
         { expiresIn: "7d" }
       );
   
